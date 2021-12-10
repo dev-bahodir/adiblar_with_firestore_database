@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/adiblar"
+        android:icon="@drawable/ic_adiblar"
+        android:title="Adiblar" />
+    <item
+        android:id="@+id/saqlanganlar"
+        android:icon="@drawable/ic_saqlanganlar"
+        android:title="Saqlanganlar" />
+    <item
+        android:id="@+id/sozlamalar"
+        android:icon="@drawable/ic_sozlamalar"
+        android:title="Sozlamalar" />
+</menu>

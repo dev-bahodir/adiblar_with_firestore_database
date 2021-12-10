@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/purple_100"
+    tools:context=".homefragment.sozlamalarfragment.AddFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_100"
+        android:fitsSystemWindows="true"
+        app:elevation="@dimen/_4sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_scrollFlags="scroll|snap">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:background="#E5E5E5"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_marginLeft="@dimen/_24sdp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adib qo'shish"
+                android:textColor="#000000"
+                android:textSize="25dp" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/image_load"
+        android:src="@drawable/rectangle_light"
+        android:scaleType="centerCrop"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_90sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_bar_layout" />
+
+    <Button
+        android:id="@+id/adib_rasmi"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15ssp"
+        android:text="Adib rasmi"
+        android:textAllCaps="false"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:background="@drawable/rectangle_green"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_30sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_load" />
+
+    <EditText
+        android:id="@+id/name"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15ssp"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/_10sdp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:hint="Adib ismi,familiyasi va otasining ismi"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_width="@dimen/_270sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@drawable/rectangle_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/adib_rasmi" />
+
+    <EditText
+        android:id="@+id/from_year"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15ssp"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/_10sdp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:inputType="number"
+        android:hint="Tug'ilgan yili"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_width="@dimen/_270sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@drawable/rectangle_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name" />
+
+    <EditText
+        android:id="@+id/to_year"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15ssp"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/_10sdp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:hint="Vafot etgan yili"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_width="@dimen/_270sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@drawable/rectangle_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/from_year" />
+
+    <LinearLayout
+        android:id="@+id/type"
+        android:orientation="vertical"
+        android:background="@drawable/rectangle_light"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/to_year"
+        android:layout_width="@dimen/_270sdp"
+        android:layout_height="@dimen/_40sdp">
+
+        <Spinner
+            android:id="@+id/typess"
+            android:focusable="true"
+            android:saveEnabled="true"
+            android:clickable="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15ssp"
+            android:entries="@array/category_arrays"
+            android:paddingLeft="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/info"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15ssp"
+        android:gravity="center|left|top"
+        android:padding="@dimen/_10sdp"
+        android:ellipsize="end"
+        android:hint="Adib haqida to'liq malumot"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_width="@dimen/_270sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:background="@drawable/rectangle_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/type" />
+
+    <Button
+        android:id="@+id/save"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15ssp"
+        android:text="Saqlash"
+        android:textAllCaps="false"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:background="@drawable/rectangle_green"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_30sdp"
+        app:layout_constraintEnd_toEndOf="@id/info"
+        app:layout_constraintTop_toBottomOf="@id/info" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

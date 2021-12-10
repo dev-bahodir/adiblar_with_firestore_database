@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root_layout"
+    android:background="@color/purple_100"
+    tools:context=".homefragment.HomeFragment">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/frame"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/smooth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <me.ibrahimsn.lib.SmoothBottomBar
+        android:id="@+id/smooth"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        app:iconSize="@dimen/_20sdp"
+        app:iconTint="@color/purple_700"
+        app:iconTintActive="@color/white"
+        app:indicatorColor="@color/purple_700"
+        app:menu="@menu/bottom_nav_menu"
+        app:indicatorRadius="@dimen/_15sdp"
+        app:itemPadding="@dimen/_8sdp"
+        app:sideMargins="@dimen/_8sdp"
+        app:textColor="@color/white"
+        app:textSize="@dimen/_12ssp"
+        app:backgroundColor="@android:color/transparent"
+        android:background="@drawable/conset"
+        app:layout_constraintTop_toBottomOf="@id/frame"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

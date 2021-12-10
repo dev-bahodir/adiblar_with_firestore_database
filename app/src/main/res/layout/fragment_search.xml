@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_100"
+    tools:context=".homefragment.bottomnavfragment.searchfragment.SearchFragment">
+
+    <EditText
+        android:id="@+id/search_edit"
+        android:hint="Search"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15ssp"
+        android:gravity="center|left"
+        android:padding="@dimen/_15sdp"
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:background="@drawable/rectanglecopy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/clear_text"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:background="@drawable/add"
+        android:rotation="45"
+        app:layout_constraintTop_toTopOf="@id/search_edit"
+        app:layout_constraintBottom_toBottomOf="@id/search_edit"
+        app:layout_constraintRight_toRightOf="@id/search_edit"
+        android:layout_width="@dimen/_12sdp"
+        android:layout_height="@dimen/_12sdp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        tools:listitem="@layout/rv_item"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingTop="@dimen/_15sdp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_edit"
+        app:spanCount="2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
